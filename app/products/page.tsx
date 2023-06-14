@@ -1,5 +1,3 @@
-"use client";
-
 import Footer from "@/components/footer/Footer";
 import Banner from "./features/hero/Banner";
 import Listing from "./features/listings/Listing";
