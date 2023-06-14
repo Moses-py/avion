@@ -48,6 +48,7 @@ export const theme = {
       hero: "url('/images/homepage/hero.webp')",
       "hero-small": "url('/images/homepage/hero_small.webp')",
       "newsletter-bg": "url('/images/homepage/newsletter.webp')",
+      "products-banner": "url('/images/product/banner.webp')",
     },
   },
 };

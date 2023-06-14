@@ -1,9 +1,16 @@
-const Button = ({ fullwidth, variant, text, onclick, classname }: Button) => {
+const Button = ({
+  fullwidth,
+  variant,
+  text,
+  onclick,
+  caret,
+  classname,
+}: Button) => {
   return (
     <>
       <button
         onClick={onclick}
-        className={`${fullwidth && "w-full"} ${
+        className={`${fullwidth && " w-full md:w-auto"} ${
           (variant === "dark" &&
             "bg-dark-primary text-white hover:bg-primary") ||
           (variant === "light" &&

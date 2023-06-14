@@ -1,7 +1,10 @@
-import Button from "../../components/buttons/Button";
-import Headline2 from "../../components/typography/Headline2";
+"use client";
+import Button from "@/components/buttons/Button";
+import Headline2 from "@/components/typography/Headline2";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <>
       <section className="block m-sm:hidden w-full">
@@ -16,7 +19,12 @@ const Hero = () => {
             </p>
           </div>
           <div>
-            <Button variant={"gray"} text={"View collection"} fullwidth />
+            <Button
+              variant={"gray"}
+              text={"View collection"}
+              onclick={() => router.push("/products")}
+              fullwidth
+            />
           </div>
         </div>
       </section>
@@ -32,7 +40,12 @@ const Hero = () => {
               </p>
             </div>
             <div>
-              <Button variant={"gray"} text={"View collection"} />
+              <Button
+                variant={"gray"}
+                text={"View collection"}
+                onclick={() => router.push("/products")}
+                fullwidth
+              />
             </div>
           </div>
         </div>

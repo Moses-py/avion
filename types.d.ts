@@ -4,6 +4,7 @@ type Button = {
   text: string;
   onclick?: () => void;
   classname?: string;
+  caret?: boolean;
 };
 
 type TextInput = {
@@ -21,3 +22,11 @@ type Typography = {
 type TypographyTheme = "dark" | "light";
 type ButtonVariant = "dark" | "light" | "gray";
 type InputVariant = "dark" | "light";
+
+type ProductListingProps = {
+  category: ListingProps[];
+};
+type ListingProps = {
+  category: string;
+  items: string[];
+};

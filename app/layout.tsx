@@ -1,11 +1,8 @@
+import Navigation from "@/components/navigation/Navigation";
 import "./globals.css";
 import localFont from "next/font/local";
-
-export const metadata = {
-  title: "Avion",
-  description: "",
-};
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const clash_display = localFont({
   src: [
     {
@@ -71,6 +68,19 @@ export default function RootLayout({
       <body
         className={`${clash_display.variable} font-sans ${satoshi.variable} font-serif`}
       >
+        <Navigation />
+        <ToastContainer
+          position="top-center"
+          autoClose={1500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         {children}
       </body>
     </html>

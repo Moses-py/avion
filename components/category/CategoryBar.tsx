@@ -1,19 +1,10 @@
+import { category } from "@/mocks/_mocks_";
 import Link from "next/link";
 
-const category = [
-  "All products",
-  "Plant pots",
-  "Ceramics",
-  "Tables",
-  "Chairs",
-  "Crockery",
-  "Tableware",
-  "Cutlery",
-];
 const CategoryBar = () => {
   return (
     <>
-      <section className="py-5 px-10 w-full hidden m-sm:block">
+      <section className="py-5 px-10 w-full block">
         <div className="flex md:justify-center items-center overflow-x-auto">
           <ul className="flex justify-start space-evenly items-center gap-[2rem]">
             {category.map((item, index) => {
@@ -22,7 +13,7 @@ const CategoryBar = () => {
                   key={index}
                   className="text-body-medium text-nav w-auto whitespace-nowrap"
                 >
-                  <Link href="">{item}</Link>
+                  <Link href={item.link}>{item.title}</Link>
                 </li>
               );
             })}

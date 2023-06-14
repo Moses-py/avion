@@ -1,6 +1,7 @@
 import Link from "next/link";
 import TextInput from "../mailingList/TextInput";
 import Image from "next/image";
+import Headline1 from "../typography/Headline1";
 const icons = [
   "facebook",
   "twitter",
@@ -13,6 +14,10 @@ const Footer = () => {
   return (
     <>
       <section className="w-full bg-dark-primary py-[48px] px-5">
+        <div className="container">
+          <Headline1 theme="light">Avion</Headline1>
+        </div>
+
         <div className="container grid xl:grid-cols-4 md:grid-cols-3 m-sm:grid-cols-2 font-sans">
           {/* Menu */}
           <div className="flex flex-col gap-4 my-[2rem]">
